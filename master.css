@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --background: #fff;
+    --main-color: #ffb727;
+    --second-color: #c70909;
+    --color: black;
+    --border: 1px rgb(65, 65, 65) solid;
+    --second-border: 1px rgb(255, 255, 255) solid;
+    --transition: 0.3s ease all;
+}
+html {
+    font-family: "Cairo", sans-serif;
+    background-color: var(--background);
+    color: var(--color);
+}
+/* media start */
+@media (max-width: 767px) {
+    .home-container{
+        width: 100%;
+        padding: 35px;
+    }
+}
+@media (min-width: 768px) {
+    .home-container{
+        width: 100%;
+        padding: 50px;
+    }
+}
+@media (min-width: 992px) {
+    .home-container{
+        width: 100%;
+        padding: 75px;
+    }
+}
+@media (min-width: 1200px) {
+    .home-container{
+        width: 100%;
+        padding: 75px 100px;
+    }
+}
+@media (min-width: 1400px) {
+    .home-container{
+        width: 100%;
+        padding: 75px 150px;
+    }
+}
+
+/* navbar */
+
+.navbar header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #945b5b;
+}
+header .logo {
+    margin-left: 50px;
+}
+header .logo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+header .links i {
+    display: none;
+}
+header .links nav {
+    overflow: hidden;
+    margin-right: 50px;
+}
+header .links nav ul {
+    display: flex;
+    direction: rtl;
+}
+header .links nav ul li {
+    margin-right: 25px;
+    list-style: none;
+}
+header .links nav ul li a {
+    text-decoration: none;
+    color: var(--color);
+    font-weight: 625;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    transition: var(--transition);
+}
+header .links nav ul li a:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 767px) {
+    header {
+        position: relative;
+    }
+    header .links:hover nav {
+        opacity: 1;
+        pointer-events: all;
+    }
+    header .links i {
+        display: inline-block;
+        margin-right: 50px;
+        color: white;
+    }
+    header .links nav {
+        background-color: #c709097b;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 75px;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+    }
+    header .links nav ul {
+        flex-direction: column;
+    }
+    header .links nav ul li {
+        border-bottom: var(--second-border);
+        margin-right: 0;
+    }
+    header .links nav ul li a {
+        padding: 10px 10px;
+        color: #fff;
+    }
+}
+@media (min-width: 1400px) {
+    .navbar header {
+        justify-content: center;
+        gap: 35%;
+    }
+    header .links nav ul li a {
+        font-size: 18px;
+    }
+}
