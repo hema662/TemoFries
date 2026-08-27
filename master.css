@@ -24,7 +24,8 @@ html {
     .home-container,
     .about-container,
     .branches-container,
-    .menu-container {
+    .menu-container,
+    .contact-container {
         width: 100%;
         padding: 35px;
     }
@@ -33,7 +34,8 @@ html {
     .home-container,
     .about-container,
     .branches-container,
-    .menu-container {
+    .menu-container,
+    .contact-container {
         width: 100%;
         padding: 50px;
     }
@@ -42,7 +44,8 @@ html {
     .home-container,
     .about-container,
     .branches-container,
-    .menu-container {
+    .menu-container,
+    .contact-container {
         width: 100%;
         padding: 75px;
     }
@@ -51,7 +54,8 @@ html {
     .home-container,
     .about-container,
     .branches-container,
-    .menu-container {
+    .menu-container,
+    .contact-container {
         width: 100%;
         padding: 75px 100px;
     }
@@ -60,7 +64,8 @@ html {
     .home-container,
     .about-container,
     .branches-container,
-    .menu-container {
+    .menu-container,
+    .contact-container {
         width: 100%;
         padding: 75px 250px;
     }
@@ -261,6 +266,12 @@ header .links nav ul li a:hover {
     border-radius: 50%;
     box-shadow: 0px 1px 10px 0px rgb(110, 110, 110);
     transition: var(--transition);
+}
+.home-container .right-box nav ul .tiktok {
+    transition: var(--transition);
+}
+.home-container .right-box nav ul .tiktok a:hover {
+    background-image: linear-gradient(45deg, rgb(0, 85, 255), rgb(212, 64, 64));
 }
 .home-container .right-box nav ul li:last-of-type a:hover {
     background-color: rgb(0, 89, 255);
@@ -613,4 +624,123 @@ header .links nav ul li a:hover {
     .menu-container .menu-box .right {
         width: 100%;
     }
+}
+
+/* contact */
+
+.contact {
+    background-color: var(--color);
+    color: var(--background);
+}
+.contact-container .text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact-container .contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-container .contact-box .side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    direction: rtl;
+}
+.contact-container .contact-box .side nav ul li {
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+}
+.contact-container .contact-box .side nav ul li a {
+    text-decoration: none;
+    color: var(--background);
+}
+.contact-container .contact-box .side .first {
+    text-align: center;
+}
+.contact-container .contact-box .side h4 {
+    padding: 10px 0;
+    text-align: center;
+}
+.contact-container .contact-box .side i {
+    text-align: center;
+}
+.contact-container .contact-box .side span a {
+    color: var(--background);
+}
+.contact-container .contact-box .side .button {
+    padding: 20px 0 30px 0;
+}
+.contact-container .contact-box .side .button a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: var(--background);
+    padding: 7px;
+    border-radius: 7px;
+}
+.contact-container .contact-box .side:last-of-type nav ul {
+    display: flex;
+    gap: 20px;
+}
+.contact-container .contact-box .side:last-of-type nav ul li a {
+    background-color: black;
+    box-shadow: 0px 1px 10px 0px rgb(110, 110, 110);
+    border-radius: 50%;
+}
+.contact-container .contact-box .side:last-of-type nav ul li a {
+    padding: 10px;
+}
+.contact-container .contact-box .side nav ul li a:hover {
+    transition: var(--transition);
+    background-color: blue;
+}
+.contact-container .contact-box nav ul .tiktok a:hover {
+    background-image: linear-gradient(45deg, rgb(0, 85, 255), rgb(212, 64, 64));
+    border-radius: 50%;
+}
+.contact-container .contact-box nav ul li:last-of-type a:hover {
+    background-color: rgb(0, 89, 255);
+}
+.contact-container .contact-box nav ul li:first-of-type a:hover {
+    background-color: rgb(169, 13, 193);
+}
+.contact-container .contact-box nav ul li a i {
+    color: #ccc;
+}
+
+@media (max-width: 767px) {
+    .contact-container .contact-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-container .contact-box .side {
+        margin: 20px 0;
+    }
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background);
+    background-color: var(--color);
+    gap: 10px;
+    padding: 20px;
+    border-top: var(--background) 1px solid;
+}
+footer nav ul {
+    display: flex;
+    gap: 20px;
+}
+footer nav ul li {
+    list-style: none;
+}
+footer nav ul li a {
+    color: var(--background);
+    box-shadow: 0px 0px 10px 0px rgb(110, 110, 110);
+    padding: 5px;
+    border-radius: 50%;
 }
